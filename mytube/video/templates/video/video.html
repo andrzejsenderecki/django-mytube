@@ -1,0 +1,6 @@
+{% block content %}
+    <h1>{{ video.name }}</h1>
+    <video name='video' width='1280' height='720' controls autoplay>
+    <source src="/{{ video.video }}" type="video/mp4">
+    </video>
+{% endblock %}
