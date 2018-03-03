@@ -1,6 +1,17 @@
+{% extends 'base.html' %}
 {% block content %}
-    <h1>{{ video.name }}</h1>
-    <video name='video' width='1280' height='720' controls autoplay>
+    <h2>{{ video.name }}</h2>
+    <video name='video' width='650' height='365,63' controls autoplay>
     <source src="/{{ video.video }}" type="video/mp4">
     </video>
+    <h4>Author: {{ video.author }}, Publish date: {{ video.publish }}</h4>
+    <h4>Description: {{ video.description }}</h4>
+    <h2>Comments</h2>
+    <a href="/comment/{{ video.id }}" %}">Add comment</a><br>
+    <br>
+    {% for comment in video.comment_set.all %}
+    <p>{{ comment.name }}<br>
+    {{ comment.content }}<br>
+    {{ comment.publish }}</p>
+    {% endfor %}
 {% endblock %}

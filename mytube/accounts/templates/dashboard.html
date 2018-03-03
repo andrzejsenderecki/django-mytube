@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block header %}
+    <h2 style="color: white">MyTube</h2>
+    <p style="color: white">Hello {{ user_name }}!</p>
+{% endblock %}
+
+{% block aside %}
+    <a href="/add_video">Add video</a><br>
+    <a href="/all_videos_user">My videos</a><br>
+    <a href="{% url 'logout' %}">Logout</a><br>
+{% endblock %}
+
+{% block content %}
+{% endblock %}

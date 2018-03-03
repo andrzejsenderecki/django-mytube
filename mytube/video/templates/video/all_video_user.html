@@ -1,0 +1,7 @@
+{% extends "dashboard.html" %}
+{% block content %}
+{% for video in all_video_user %}
+<h1><a href="/user_video/{{ video.id }}">{{ video.name }}</a></h1>
+<br>
+{%endfor%}
+{% endblock %}
